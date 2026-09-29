@@ -1,0 +1,14 @@
+name: "redaction-hash-verifier"
+description: "Generates SHA-256 cryptographic seal of redacted document content"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "redaction_hash_verifier.py"
+parameters:
+  type: "object"
+  properties:
+    redacted_content:
+      type: "string"
+      description: "Final redacted text string"
+  required:
+    - "redacted_content"

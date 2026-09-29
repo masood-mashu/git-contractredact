@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "verify_redaction_hash",
+  "description": "Generates SHA-256 cryptographic seal of redacted document content",
+  "type": "object",
+  "properties": {
+    "redacted_content": {
+      "type": "string",
+      "description": "Final redacted text string"
+    }
+  },
+  "required": [
+    "redacted_content"
+  ]
+}

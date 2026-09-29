@@ -1,0 +1,14 @@
+name: "confidential-clause-tagger"
+description: "Flags non-disclosure, intellectual property transfer, and non-solicitation clauses"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "confidential_clause_tagger.py"
+parameters:
+  type: "object"
+  properties:
+    clause_text:
+      type: "string"
+      description: "Contract clause text to inspect"
+  required:
+    - "clause_text"

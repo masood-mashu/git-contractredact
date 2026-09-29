@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "mask_pii_entities",
+  "description": "Detects and masks personal identifying numbers, emails, and phone records",
+  "type": "object",
+  "properties": {
+    "document_text": {
+      "type": "string",
+      "description": "Contract text string to mask"
+    }
+  },
+  "required": [
+    "document_text"
+  ]
+}
