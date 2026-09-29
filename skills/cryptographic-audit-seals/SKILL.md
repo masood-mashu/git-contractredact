@@ -1,10 +1,15 @@
-# Skill: Cryptographic Audit Seals
+---
+name: cryptographic-audit-seals
+description: SHA-256 document tamper verification and chain-of-custody protocols
+---
 
-## Description
+# Cryptographic Audit Seals
+
+## Overview
 SHA-256 document tamper verification and chain-of-custody protocols.
 
-## Procedural Workflow
-1. Ingest relevant parameters from repository state.
-2. Execute deterministic analysis via `GitContractRedact` registered tools.
-3. Validate output against compliance rules in `RULES.md`.
-4. Return structured status dictionary to calling runtime.
+## Procedure
+1. Ingest input manifest or configuration artifact.
+2. Execute automated deterministic verification checks.
+3. Compare findings against predefined compliance policies.
+4. Record findings and sign the audit manifest.

@@ -1,16 +1,30 @@
 spec_version: "0.1.0"
-name: "git-contractredact"
-version: "0.1.0"
+name: git-contractredact
+version: 1.0.0
 description: "Autonomous Legal Document PII Masking, Confidentiality Redaction & Tamper-Proof Sealing Agent"
-framework: "opengap"
-authors:
-  - name: "masood-mashu"
-    email: "masoodmashu03@gmail.com"
+author: "masood-mashu"
 license: "Apache-2.0"
 
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - legal-redaction-standards
+  - cryptographic-audit-seals
+
+tools:
+  - pii-entity-masker
+  - confidential-clause-tagger
+  - redaction-hash-verifier
+
 runtime:
-  language: "python"
-  version: ">=3.10"
+  max_turns: 50
   timeout: 120
 
 tags:

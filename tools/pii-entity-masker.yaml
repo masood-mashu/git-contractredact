@@ -1,14 +1,18 @@
-name: "pii-entity-masker"
+name: pii-entity-masker
+version: 1.0.0
 description: "Detects and masks personal identifying numbers, emails, and phone records"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "pii_entity_masker.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     document_text:
-      type: "string"
+      type: string
       description: "Contract text string to mask"
   required:
-    - "document_text"
+    - document_text
+implementation:
+  type: script
+  path: pii_entity_masker.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
